@@ -7,9 +7,11 @@ This project uses ROS noetic to demonstrate a simple line following Turtlebot in
 # Implementation
 In this project , a turtlebot is launched into a gazebo line world as above. follower node subscribed to an image topic called /camera/rgb/image_raw which publishes the image data of turtlebot camera .As ROS passes around images in its own sensor_msgs/Image message format, CvBridge is used to convert into bgr format. y, filtering on RGB values turns out to be a surprisingly poor way to find a particular color in an image, since the raw RGB values are a function of the overall brightness as well as the color of the object.Slightly different lighting conditions would result in the filter failing to perform as intended. Instead, a better technique for filtering by color is to transform RGB images into HSV images.we can then apply a threshold for hues near yellow to obtain a binary image in which pixels are either true (meaning they pass the filter) or false (they do not pass the filter).Then, we will use the OpenCV moments() function to calculate the centre of the blob of the binary image that passes our filter. To follow the detected line Proportional Controller(P-Controller) is used ,the error signal is the distance between the centerline of the image and the center of the line we are trying to follow.The velocity commands are send via topic /cmd_vel to the turtlebot.
 # Dependencies
-* ROS Kinetic
+* ROS Noetic
+* Gazebo
 * Catkin
-* roscpp package
-* std_msgs package
-* message_generation package
+* rospy package
+* sensor_msgs package
+* geometry_msgs package
 * OpenCV
+* numpy
