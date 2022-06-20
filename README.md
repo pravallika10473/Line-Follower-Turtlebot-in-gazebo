@@ -16,6 +16,6 @@ In this project , a turtlebot is launched into a gazebo line world as above. fol
 * OpenCV
 * numpy
 # Turtlebot3 Packages
- git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
- git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
- git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
+* git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+* git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+* git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
